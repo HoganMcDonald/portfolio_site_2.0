@@ -37,8 +37,8 @@ $(document).ready( () => {
 
   // when nav element is clicked, scrolls to anchor and closes nav
   function scrollToAnchor(id, num){
-    $('body').removeClass('bodyFix');
-    $('.body').removeClass('menuOpen');
+    $('.page-container').removeClass('menuOpen');
+    $('#menuIcon').removeClass('menuOpen');
     $('li').removeClass('selected');
     $('nav').removeClass('sideNaveOpen');
     $('#' + num).addClass('selected');
@@ -77,8 +77,7 @@ $(document).ready( () => {
 
   // toggle side nav
   $('#menuIcon').on('click', () => {
-    $('.body').toggleClass('menuOpen');
-    $('body').toggleClass('bodyFix');
+    $('.page-container').toggleClass('menuOpen');
     $('#menuIcon').toggleClass('menuOpen');
     $('nav').toggleClass('sideNaveOpen');
   }); // end toggle side nav

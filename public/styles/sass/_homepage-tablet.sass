@@ -1,0 +1,43 @@
+.page-container
+  width: 100vw
+  transition-duration: 300ms
+
+#firstBackground
+  background-image: url('/assets/hancock.jpg')
+  background-size: cover
+  background-position: top
+  height: 100vh
+  width: 100vw
+  .overlay
+    height: 100%
+    width: 100%
+    background-color: $overlayColor
+
+.grid-wrapper
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+  height: auto
+  width: $profileSizeIpad
+  display: grid
+  margin: auto
+  grid-template-columns: $profileSizeIpad
+  grid-row-gap: 10vw
+  grid-template-rows: $profileSizeIpad 30vh
+  .profileImage
+    border:
+      radius: 50%
+      width: 1px
+      style: solid
+      color: $profileBorderColor
+    background:
+      image: url('/assets/profile.jpg')
+      size: cover
+      position: center
+  .profileText
+    width: 100%
+    align-self: center
+    h1
+      text-align: center
+      margin-left: 2vw
+      +headerFont(2.4em)
