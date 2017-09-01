@@ -1,0 +1,54 @@
+//breakpoints
+$minDesktop: 1024px
+$maxIpad: 1024px
+$minIpad: 736px
+$maxPhone: 736px
+
+
+//nav colors
+$navLinkActive: #7a7a7a
+$sideBarColor: rgba(#e6ba1f, 0.85)
+
+//profile image
+$profileSizeDesktop: 400px
+$profileSizeIpad: 40vw
+$profileSizeMobile: 60vw
+$profileBorderColor: #9e9e9e
+
+//heading text
+$headingColor: #000000
+$headingColor2: #9e9e9e
+
+//repos
+$repoBorderColor: #9e9e9e
+
+=siteGradient()
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)
+
+
+//font
+=headerFont($size)
+  font:
+    family: "source-sans-pro"
+    size: $size
+    style: italic
+    weight: 700
+  letter-spacing: 0.3em
+  color: $headingColor
+  text-transform: uppercase
+
+=headerFont2($size)
+  font:
+    family: "source-sans-pro"
+    size: $size
+    style: italic
+    weight: 400
+  color: $headingColor2
+  text-transform: uppercase
+
+=bodyFont($size)
+  font:
+    family: "source-sans-pro"
+    size: $size
+    weight: 400
+  color: $headingColor2

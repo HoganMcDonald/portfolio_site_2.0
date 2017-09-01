@@ -1,0 +1,19 @@
+//global vars
+@import vars
+
+body, html
+  margin: 0
+  max-width: 100%
+  overflow-x: hidden
+
+// desktop styles
+@media  (min-width: $minDesktop)
+  @import nav
+
+// ipad styles
+@media (min-width: $minIpad) and (max-width: $maxIpad)
+  @import nav
+
+// mobile styles
+@media (max-width: $maxPhone)
+  @import nav

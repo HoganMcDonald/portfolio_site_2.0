@@ -8,7 +8,7 @@ const gulp = require('gulp'),
 //tasks
 gulp.task('styles', () => {
   console.log('styles ran');
-  gulp.src('public/styles/sass/main.scss')
+  gulp.src('public/styles/sass/main.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -24,8 +24,8 @@ gulp.task('styles', () => {
 });
 //watch tasks
 gulp.task('watch:styles', () => {
-  gulp.watch('public/styles/sass/*.scss', ['styles']);
+  gulp.watch('public/styles/sass/*.sass', ['styles']);
 });
 
 //default tasks
-gulp.task('default', ['styles']);
+gulp.task('default', ['watch:styles']);
