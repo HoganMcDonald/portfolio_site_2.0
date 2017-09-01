@@ -1,15 +1,15 @@
 body
-  background-color: rgb(201, 120, 24)
+  background-color: rgb(129, 201, 24)
 
 #menuIcon
   position: fixed
-  top: 3vw
-  left: 3vw
-  height: 4vw
+  top: 5vw
+  left: 5vw
+  height: 6vw
   transition-duration: $sideNavSpeed
 
 .menuOpen
-  transform: translateX(30vw)
+  transform: translateX(60vw)
 
 .sideNaveOpen
   transform: translateX(0vw)
@@ -23,10 +23,10 @@ nav
   position: fixed
   top: 0
   left: 0
-  width: 30vw
+  width: 60vw
   height: 100vh
   +siteGradient()
-  transform: translateX(-30vw)
+  transform: translateX(-60vw)
   transition: transform $sideNavSpeed
   ul
     float: left
