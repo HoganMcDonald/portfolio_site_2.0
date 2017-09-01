@@ -4,7 +4,8 @@ const express = require('express'),
   app = express();
 
 // require routes
-const index = require('./modules/routes/index');
+const index = require('./modules/routes/index'),
+  resume = require('./modules/routes/resume');
 
 const port = process.env.PORT;
 
@@ -13,6 +14,7 @@ app.use(express.static('public'));
 
 // use routes
 app.use('/', index);
+app.use('/resume', resume)
 
 app.listen(port, ()=> {
   console.log('running on port', port);
