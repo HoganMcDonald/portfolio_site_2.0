@@ -1,0 +1,42 @@
+#menuIcon
+  position: fixed
+  top: 3vw
+  left: 3vw
+  height: 4vw
+  transition-duration: $sideNavSpeed
+
+.menuOpen
+  transform: translateX(30vw)
+
+.sideNaveOpen
+  transform: translateX(0vw)
+
+.bodyFix
+  position: fixed
+  overflow: hidden
+
+nav
+  z-index: -10
+  position: fixed
+  top: 0
+  left: 0
+  width: 30vw
+  height: 100vh
+  +siteGradient()
+  transform: translateX(-60vw)
+  transition: transform $sideNavSpeed
+  ul
+    float: left
+    padding-left: 5vw
+    a
+      text-decoration: none
+    li
+      user-select: none
+      transition-duration: $sideNavSpeed
+      display: block
+      margin-left: 2vwpx
+      margin-top: 15px
+      +headerFont2(1.8em)
+      &:hover
+        cursor: pointer
+        color: $navLinkActive

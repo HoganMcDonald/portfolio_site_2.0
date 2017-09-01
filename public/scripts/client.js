@@ -1,39 +1,41 @@
 $(document).ready( () => {
 
+  // represents when nav element is faded in. used to check if it has already.
   let faded = false;
+  const fadeTime = 2000 // time from window load at which fade will occur
 
+  // fades in nav at interval
   let fadeInScroll = setTimeout( () => {
-    console.log('faded', window.orientation);
     faded = true;
     if (window.orientation === undefined) {
       $('nav').addClass('show');
     }
-  }, 2000)
+  }, fadeTime) // end fade at interval
 
+  // scroll event
   $(window).on('scroll', () => {
 
-    // cancel timeout
+    // cancel interval for fade in
     clearTimeout(fadeInScroll);
-    const bScroll = $('body').scrollTop();
+    $('nav').addClass('show'); // fades in nav when scrolled
 
-    /*
-    nav bar
-    */
-    $('nav').addClass('show');
+    // local variable created on scroll event that stores current pixel
+    // count from the top of body.
+    const bScroll = $('body').scrollTop();
+    // console.log(bScroll); // test position
+
+    // nav bar scroll events
     if (bScroll > $('nav').height() + 10) {
+      // when absolute positioned nav leaves page + 10px, makes fixed with background
       $('nav').addClass('navVis');
     } else if (bScroll <= $('nav').height()) {
+      // when scrolled to top of page, makes absolute again
       $('nav').removeClass('navVis');
     }
 
-
-
-
   }); // end on scroll
 
-  /*
-  nav scrolls
-  */
+  // when nav element is clicked, scrolls to anchor and closes nav
   function scrollToAnchor(id, num){
     $('body').removeClass('bodyFix');
     $('.body').removeClass('menuOpen');
@@ -46,9 +48,9 @@ $(document).ready( () => {
     } else {
       $('html, body').animate( {scrollTop: dest.offset().top - 30}, 'slow' );
     }
+  } // end scroll to anchors
 
-  }
-
+  // on click for nav element
   $('li').on('click', function() {
     switch ($(this).attr('id')) {
       case '1':
@@ -71,16 +73,14 @@ $(document).ready( () => {
         console.log('other');
         scrollToAnchor('home', 1);
     }
-  });
+  }); // click nav element
 
-  /*
-  side nav
-  */
+  // toggle side nav
   $('#menuIcon').on('click', () => {
     $('.body').toggleClass('menuOpen');
     $('body').toggleClass('bodyFix');
-    $('#menuIcon').toggleClass('sideNaveOpen');
+    $('#menuIcon').toggleClass('menuOpen');
     $('nav').toggleClass('sideNaveOpen');
-  });
+  }); // end toggle side nav
 
 }); // end document ready
