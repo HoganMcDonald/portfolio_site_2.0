@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "mkdir public/vendors && cp node_modules/angular/angular.min.js public/vendors && cp node_modules/jquery/dist/jquery.min.js public/vendors",
-    "heroku-postbuild": "mkdir public/vendors && cp node_modules/angular/angular.min.js public/vendors && cp node_modules/jquery/dist/jquery.min.js public/vendors",
     "start": "node server.js"
   },
   "repository": {
