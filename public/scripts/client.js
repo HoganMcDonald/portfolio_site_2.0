@@ -1,58 +1,61 @@
 // video id
 const id = 'd45dMdWUSsU';
 
-// load ifram api async
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+const viewportwidth = window.innerWidth;
+console.log(viewportwidth);
+console.log(window.orientation);
 
-// declare player var scoped to window
-var player;
+if (viewportwidth >= 1024 && window.orientation === undefined) {
+  console.log('checked');
+  // load ifram api async
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-//called by api. creates iframe from div on page
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
-    videoId: id,
-    playerVars: {
-      'controls': 0,
-      'showinfo': 0,
-      'rel': 0,
-      'start': 19,
-      'end': 54,
-      'loop': 1
-    },
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
+  // declare player var scoped to window
+  var player;
+
+  //called by api. creates iframe from div on page
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      videoId: id,
+      playerVars: {
+        'controls': 0,
+        'showinfo': 0,
+        'rel': 0,
+        'start': 19,
+        'end': 54,
+        'loop': 1
+      },
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  } // end onYouTubeIframeAPIReady
+
+  // called on ready - mutes playback
+  function onPlayerReady(event) {
+    event.target.playVideo();
+    player.mute()
+  } // end onPlayerReady
+
+  function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+      player.playVideo();
     }
-  });
-} // end onYouTubeIframeAPIReady
 
-// called on ready - mutes playback
-function onPlayerReady(event) {
-  event.target.playVideo();
-  player.mute()
-} // end onPlayerReady
-
-function onPlayerStateChange(event) {
-  if (event.data === YT.PlayerState.ENDED) {
-    player.playVideo();
   }
 
+  // can be used to stop playback
+  function stopVideo() {
+    player.stopVideo();
+  } // end stopVideo
 }
-
-// can be used to stop playback
-function stopVideo() {
-  player.stopVideo();
-} // end stopVideo
 
 
 $(document).ready( () => {
-
-
-
-
 
   // represents when nav element is faded in. used to check if it has already.
   let faded = false;
