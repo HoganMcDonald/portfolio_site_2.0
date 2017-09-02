@@ -5,6 +5,7 @@ $minIpad: 736px
 $maxPhone: 736px
 
 //nav colors
+$navLinkInactive: #ffffff
 $navLinkActive: #7a7a7a
 $sideBarColor: rgba(#e6ba1f, 0.85)
 $sideNavSpeed: 300ms
@@ -40,13 +41,13 @@ $overlayColor: rgba(#d6d6d6, 0.42)
   color: $headingColor
   text-transform: uppercase
 
-=headerFont2($size)
+=headerFont2($size, $color)
   font:
     family: "source-sans-pro"
     size: $size
     style: italic
     weight: 400
-  color: $headingColor2
+  color: $color
   text-transform: uppercase
 
 =bodyFont($size)
