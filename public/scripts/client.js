@@ -94,6 +94,7 @@ $(document).ready( () => {
 
   // when nav element is clicked, scrolls to anchor and closes nav
   function scrollToAnchor(id, num){
+    $('body').removeClass('lock-scroll');
     $('.page-container').removeClass('menuOpen');
     $('#menuIcon').removeClass('menuOpen');
     $('li').removeClass('selected');
@@ -134,6 +135,7 @@ $(document).ready( () => {
 
   // toggle side nav
   $('#menuIcon').on('click', () => {
+    $('body').toggleClass('lock-scroll');
     $('.page-container').toggleClass('menuOpen');
     $('#menuIcon').toggleClass('menuOpen');
     $('nav').toggleClass('sideNaveOpen');

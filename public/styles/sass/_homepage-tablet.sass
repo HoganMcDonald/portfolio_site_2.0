@@ -2,15 +2,19 @@
   width: 100vw
   transition-duration: 300ms
 
+.lock-scroll
+  position: fixed
+  overflow-x: hidden
+
 #firstBackground
-  background-image: url('/assets/hancock.jpg')
+  background-image: url('/assets/minneapolis.jpg')
   background-size: cover
   background-position: top
   height: 100vh
   width: 100vw
   overflow: hidden
   .overlay
-    height: 100%
+    height: 100vh
     width: 100%
     background-color: $overlayColor
 
@@ -42,3 +46,7 @@
       text-align: center
       margin-left: 2vw
       +headerFont(2.4em)
+
+#firstContent
+  height: 100vh
+  background-color: #595959
