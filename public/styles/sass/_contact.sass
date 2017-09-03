@@ -16,26 +16,32 @@
     p
       +bodyFont(1.4em)
     label
-      margin-top: 40px
+      margin-top: 30px
       display: block
       +headerFont2(1.4em, $headingColor2)
     input
-      margin-top: 40px
-      display: block
       margin: auto
+      margin-top: 20px
+      display: block
       background: none
       border: none
       border-bottom: solid 2px $profileBorderColor
       width: 35vw
+      font-size: 1em
       &:active
         outline: none
       &:focus
         outline: none
     button
       // +siteGradient()
+      cursor: pointer
       background: none
       text-decoration: underline
       border: none
       border-radius: 0
       margin-top: 40px
       +headerFont(1.4em)
+      &:focus
+        outline: none
+      &:active
+        color: $headingColor2

@@ -2,11 +2,8 @@
 const id = 'd45dMdWUSsU';
 
 const viewportwidth = window.innerWidth;
-console.log(viewportwidth);
-console.log(window.orientation);
 
 if (viewportwidth >= 1024 && window.orientation === undefined) {
-  console.log('checked');
   // load ifram api async
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";

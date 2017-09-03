@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp" >
 
   <head>
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/styles/main.min.css">
   </head>
 
-  <body>
+  <body ng-app="myApp" ng-controller="mainController">
     <!-- navbar -->
     <img src="/assets/menuIcon.svg" alt="Open Menu" id="menuIcon">
     <nav>
@@ -50,14 +50,14 @@
           <hr>
           <p>Have a cool project in mind or just want to say hey?<br>Feel free to send me a message!</p>
           <label for="name">name</label>
-          <input type="text" name="name">
+          <input type="text" name="name" ng-model="name">
           <label for="email">email</label>
-          <input type="email" name="email">
+          <input type="email" name="email" ng-model="email">
           <label for="subject">subject</label>
-          <input type="text" name="subject">
+          <input type="text" name="subject" ng-model="subject">
           <label for="message">message</label>
-          <input type="text" name="message">
-          <button type="button">send message</button>
+          <input type="text" name="message" ng-model="message">
+          <button type="button" ng-click="sendEmail()">send message</button>
         </div>
       </div>
 
@@ -85,6 +85,7 @@
     <script src="vendors/jquery.min.js" charset="utf-8"></script>
     <script src="vendors/angular.min.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
+    <script src="scripts/controller.js" charset="utf-8"></script>
 
   </body>
 
