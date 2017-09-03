@@ -1,0 +1,41 @@
+#contact
+  height: 90vh
+  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
+  .container
+    h1
+      margin-top: 0
+      +headerFont(2.6em)
+    hr
+      width: 140px
+      margin-top: 40px
+      margin-bottom: 40px
+      border: solid 1px blue
+    p
+      +bodyFont(1.4em)
+    label
+      margin-top: 40px
+      display: block
+      +headerFont2(1.4em, $headingColor2)
+    input
+      margin-top: 40px
+      display: block
+      margin: auto
+      background: none
+      border: none
+      border-bottom: solid 2px $profileBorderColor
+      width: 35vw
+      &:active
+        outline: none
+      &:focus
+        outline: none
+    button
+      // +siteGradient()
+      background: none
+      text-decoration: underline
+      border: none
+      border-radius: 0
+      margin-top: 40px
+      +headerFont(1.4em)

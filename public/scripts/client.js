@@ -112,23 +112,21 @@ $(document).ready( () => {
   $('li').on('click', function() {
     switch ($(this).attr('id')) {
       case '1':
-        console.log(1);
         scrollToAnchor('home', 1);
         break;
       case '2':
-        console.log(2);
         scrollToAnchor('projects', 2);
         break;
       case '3':
-        console.log(3);
         scrollToAnchor('reading', 3);
         break;
       case '4':
-        console.log(4);
         scrollToAnchor('links', 4);
         break;
+      case '5':
+        scrollToAnchor('contact', 5);
+        break;
       default:
-        console.log('other');
         scrollToAnchor('home', 1);
     }
   }); // click nav element

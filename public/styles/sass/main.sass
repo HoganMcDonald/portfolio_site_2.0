@@ -10,10 +10,15 @@ body, html
 .show
   opacity: 1
 
+.selected
+  color: $navLinkActive
+  text-decoration: underline
+
 // desktop styles
 @media (min-width: $minDesktop)
   @import nav
   @import homepage
+  @import contact
 
 ipad styles
 @media (min-width: $minIpad) and (max-width: $maxIpad)
