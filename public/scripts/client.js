@@ -2,6 +2,7 @@
 const id = 'd45dMdWUSsU';
 
 const viewportwidth = window.innerWidth;
+const viewportHeight = window.innerHeight;
 
 if (viewportwidth >= 1024 && window.orientation === undefined) {
   // load ifram api async
@@ -51,7 +52,6 @@ if (viewportwidth >= 1024 && window.orientation === undefined) {
   } // end stopVideo
 }
 
-
 $(document).ready( () => {
 
   // represents when nav element is faded in. used to check if it has already.
@@ -87,6 +87,39 @@ $(document).ready( () => {
       $('nav').removeClass('navVis');
     }
 
+    // reveal progress bars
+    if (bScroll > $('#work').offset().top - viewportHeight / 2 - 100 && bScroll < $('#work').offset().top + $('#work').height() - viewportHeight / 2  )  {
+      $('.progress-bar').css('opacity', 1);
+    } else {
+      $('.progress-bar').css('opacity', 0);
+    }
+
+    // highlight correct progress-bar unit
+    let skillsTop = $('.skills').offset().top;
+    let projectsTop = $('.projects').offset().top;
+    let experienceTop = $('.experience').offset().top;
+    let experienceBottom = $('#contact').offset().top
+    let current = bScroll + 80;
+
+    if (current >= skillsTop && current < projectsTop) { // skills section
+      $('.progress-circle').removeClass('active-progress');
+      $('.progress-circle').eq(0).addClass('active-progress');
+    } else if (current >= projectsTop && current < experienceTop) { // projects section
+      $('.progress-circle').removeClass('active-progress');
+      $('.progress-circle').eq(1).addClass('active-progress');
+    } else if (current >= experienceTop && current < experienceBottom) { // experience section
+      $('.progress-circle').removeClass('active-progress');
+      $('.progress-circle').eq(2).addClass('active-progress');
+    }
+
+    else {
+      $('.progress-circle').removeClass('active-progress');
+    }
+    // else if (bScroll < $('#work').offset().top + $('#work').height()) {
+    //
+    // }
+
+
   }); // end on scroll
 
   // when nav element is clicked, scrolls to anchor and closes nav
@@ -99,7 +132,7 @@ $(document).ready( () => {
     $('#' + num).addClass('selected');
     var dest = $("#" + id);
     if (window.orientation === undefined) {
-      $('html, body').animate( {scrollTop: dest.offset().top - 90}, 400 );
+      $('html, body').animate( {scrollTop: dest.offset().top - 70}, 400 );
     } else {
       $('html, body').animate( {scrollTop: dest.offset().top - 30}, 'slow' );
     }
@@ -112,10 +145,10 @@ $(document).ready( () => {
         scrollToAnchor('home', 1);
         break;
       case '2':
-        scrollToAnchor('projects', 2);
+        scrollToAnchor('work', 2);
         break;
       case '3':
-        scrollToAnchor('reading', 3);
+        scrollToAnchor('play', 3);
         break;
       case '4':
         scrollToAnchor('links', 4);
@@ -135,5 +168,14 @@ $(document).ready( () => {
     $('#menuIcon').toggleClass('menuOpen');
     $('nav').toggleClass('sideNaveOpen');
   }); // end toggle side nav
+
+  // progress circle hover reveal
+  $('.progress-circle')
+    .mouseenter(function() {
+      $(this).children().css('opacity', 1);
+    })
+    .mouseleave(function() {
+      $(this).children().css('opacity', 0);
+    });
 
 }); // end document ready
