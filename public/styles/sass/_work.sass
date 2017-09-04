@@ -8,19 +8,32 @@
     text-align: center
     margin-bottom: 40px
   .skills
+    border: solid 3px #000000
+    overflow: hidden
     height: 50vh
-    display: flex
-    align-items: center
-    justify-content: center
-    h2
-      +headerFont2(2em, $headingColor3)
+    .paralax-background
+      height: 120%
+      width: 100%
+      background:
+        image: url('/assets/laptop.jpg')
+        size: cover
+        repeat: none
+        position: center
+        attachment: inherit
+      filter: blur(2px)
+      opacity: .9
+    .overlay
+      position: relative
+      top: 0
+      height: 100%
+      width: 100%
+      opacity: .8
+      background-color: $overlayColor
+      z-index: 20
+      h2
+        +headerFont2(2em, $headingColor3)
   .projects
     height: 70vh
-    background:
-      image: url('/assets/laptop.jpg')
-      size: cover
-      repeat: none
-      position: center
-      attachment: inherit 
+
   .experience
     height: 70vh
