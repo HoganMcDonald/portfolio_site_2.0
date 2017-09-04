@@ -30,31 +30,54 @@
       width: 100%
       opacity: 1
       background-color: $overlayColor
-      h2
-        +headerFont2(2em, $headingColor3)
-      .language-grid
+      .skills-grid
         display: grid
-        grid-template-columns: 120px 120px 120px
-        grid-template-rows: 120px 120px
-        grid-column-gap: 20px
-        grid-row-gap: 20px
-        width: 400px
+        grid-template-columns: 40vw 40vw
+        grid-template-rows: 70vh
+        grid-column-gap: 5vw
+        width: 85vw
         margin: auto
-        .language-icon
+        .icon-wrapper
+          align-self: center
+          // height: 100%
+          h2
+            margin-top: 0
+            +headerFont2(2em, $headingColor3)
+          .language-grid
+            display: grid
+            grid-template-columns: 120px 120px 120px
+            grid-template-rows: 120px 120px 120px
+            grid-column-gap: 20px
+            grid-row-gap: 20px
+            width: 400px
+            margin: auto
+            .language-icon
+              width: 100%
+              height: 100%
+              border:
+                radius: 50%
+                style: solid
+                width: 2px
+                color: $headingColor3
+              h3
+                margin: 0
+                text-align: center
+                position: relative
+                top: 50%
+                transform: translateY(-50%)
+                +headerFont2(1.2em, $headingColor3)
+        .description-wrapper
           width: 100%
-          height: 100%
-          border:
-            radius: 50%
-            style: solid
-            width: 2px
-            color: $headingColor3
-          h3
-            margin: 0
-            text-align: center
-            position: relative
-            top: 50%
-            transform: translateY(-50%)
-            +headerFont2(1.3em, $headingColor3)
+          align-self: center
+          p
+            max-width: 70%
+            margin: auto
+            +bodyFont(1.2em)
+            color: white
+            line-height: 170%
+            a
+              +headerFont2(1.2em, $headingColor3)
+
   .projects
     height: 70vh
 

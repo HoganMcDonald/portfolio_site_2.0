@@ -120,7 +120,6 @@ $(document).ready( () => {
     let paraHeight = para.height();
 
     if (paraTop < bScroll + viewportHeight && paraTop + paraHeight > bScroll) {
-      console.log('in the window');
       para.css('transform', 'translateY(' + ((paraTop - bScroll) / 17 - 75) + 'px)')
     }
 
@@ -136,7 +135,7 @@ $(document).ready( () => {
     $('#' + num).addClass('selected');
     var dest = $("#" + id);
     if (window.orientation === undefined) {
-      $('html, body').animate( {scrollTop: dest.offset().top - 70}, 400 );
+      $('html, body').animate( {scrollTop: dest.offset().top - 68}, 400 );
     } else {
       $('html, body').animate( {scrollTop: dest.offset().top - 30}, 'slow' );
     }
