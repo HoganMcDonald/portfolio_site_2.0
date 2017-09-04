@@ -130,9 +130,11 @@ $(document).ready( () => {
     $('body').removeClass('lock-scroll');
     $('.page-container').removeClass('menuOpen');
     $('#menuIcon').removeClass('menuOpen');
-    $('li').removeClass('selected');
-    $('nav').removeClass('sideNaveOpen');
-    $('#' + num).addClass('selected');
+    if (num) {
+      $('li').removeClass('selected');
+      $('nav').removeClass('sideNaveOpen');
+      $('#' + num).addClass('selected');
+    }
     var dest = $("#" + id);
     if (window.orientation === undefined) {
       $('html, body').animate( {scrollTop: dest.offset().top - 68}, 400 );
@@ -163,6 +165,23 @@ $(document).ready( () => {
         scrollToAnchor('home', 1);
     }
   }); // click nav element
+
+  // progress-circle click funciton
+  $('.progress-circle').on('click', function() {
+    switch ($(this).attr('id')) {
+      case 'projects':
+        scrollToAnchor('projects-progress');
+        break;
+      case 'skills':
+        scrollToAnchor('skills-progress');
+        break;
+      case 'experience':
+        scrollToAnchor('experience-progress');
+        break;
+      default:
+        break;
+    }
+  }); // end progress-circle click
 
   // toggle side nav
   $('#menuIcon').on('click', () => {
