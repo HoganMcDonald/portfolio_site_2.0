@@ -121,7 +121,7 @@ $(document).ready( () => {
 
     if (paraTop < bScroll + viewportHeight && paraTop + paraHeight > bScroll) {
       console.log('in the window');
-      para.css('transform', 'translateY(' + ((paraTop - bScroll) / 20 - 75) + 'px)')
+      para.css('transform', 'translateY(' + ((paraTop - bScroll) / 17 - 75) + 'px)')
     }
 
   }); // end on scroll
