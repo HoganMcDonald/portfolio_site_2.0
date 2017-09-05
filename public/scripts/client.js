@@ -123,8 +123,17 @@ $(document).ready( () => {
       }); // end each loop
     } // end fade in praeco images
 
+    // fade in capture images
+    if (current > $('.capture').offset().top - 600) {
+      $('.mockup2').each(function(i) {
+        setTimeout(function() {
+          $('.mockup2').eq(i).addClass('vis');
+        }, 400 * (i + 1));
+      }); // end each loop
+    } // end fade in capture images
+
     // fade in personal-site images
-    if (current > $('.personal-site').offset().top - 300) {
+    if (current > $('.personal-site').offset().top - 600) {
       $('.mockup1').each(function(i) {
         setTimeout(function() {
           $('.mockup1').eq(i).addClass('vis');
