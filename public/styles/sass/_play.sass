@@ -1,0 +1,39 @@
+#play
+  width: 100%
+  height: 90vh
+  background-color: white
+  h1
+    +headerFont(2.6em)
+    text-align: center
+  .play-grid
+    display: grid
+    grid-template-columns: 20vw 20vw 20vw
+    grid-template-rows: 20vw 20vw
+    grid-row-gap: 1vw
+    grid-column-gap: 5vw
+    width: 70vw
+    margin: auto
+    .image-window
+      height: 100%
+    .read
+      background:
+        image: url('/assets/franken.jpg')
+        position: center
+        size: contain
+        repeat: no-repeat
+    .play
+      background:
+        image: url('/assets/horizon.jpg')
+        position: center
+        size: contain
+        repeat: no-repeat
+    .listen
+      background:
+        image: url('/assets/homecoming.jpg')
+        position: center
+        size: contain
+        repeat: no-repeat
+    h2
+      +headerFont2(1.8em, $headingColor2)
+      text-align: center
+      align-self: center
