@@ -80,7 +80,97 @@
               +headerFont2(1.2em, $headingColor3)
 
   .projects
-    height: 70vh
+    min-height: 70vh
+    .personal-site
+      height: 100vh
+      position: relative
+      .desktop
+        position: absolute
+        height: 90vh
+        opacity: 0
+        transform: translateX(-20px)
+      .tablet
+        position: absolute
+        height: 65vh
+        left: 25vw
+        top: 22vh
+        opacity: 0
+        transform: translateX(-20px)
+      .phone
+        position: absolute
+        height: 40vh
+        left: 42vw
+        top: 43vh
+        opacity: 0
+        transform: translateX(-20px)
+      .project-description
+        width: 30vw
+        position: absolute
+        top: 30vh
+        right: 8vw
+        text-align: center
+        h2
+          +headerFont2(1.6em, white)
+        p
+          +bodyFont(1em)
+          line-height: 170%
+        .tech-used-div
+          max-width: 15vw
+          margin: auto
+          ul
+            padding: 0
+          .tech-used
+            display: inline-block
+            background-color: black
+            margin: 3px
+            padding: 1px 4px
+            border-radius: 4px
+            color: white
+            +bodyFont(1em)
+    .praeco
+      height: 100vh
+      position: relative
+      .phone
+        position: absolute
+        height: 100vh
+        top: -4vh
+        right: 5vw
+        opacity: 0
+        transform: translateX(20px)
+      .project-description
+        width: 30vw
+        position: absolute
+        top: 30vh
+        left: 12vw
+        text-align: center
+        h2
+          +headerFont2(1.6em, white)
+        p
+          +bodyFont(1em)
+          line-height: 170%
+        .tech-used-div
+          max-width: 15vw
+          margin: auto
+          ul
+            padding: 0
+          .tech-used
+            display: inline-block
+            background-color: black
+            margin: 3px
+            padding: 1px 4px
+            border-radius: 4px
+            color: white
+            +bodyFont(1em)
 
   .experience
-    height: 70vh
+    height: 120vh
+
+.mockup0
+  transition-duration: 400ms
+
+.mockup1
+  transition-duration: 400ms
+
+.vis
+  opacity: 1 !important
+  transform: translateX(0px) !important
