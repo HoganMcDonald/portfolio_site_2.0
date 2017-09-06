@@ -1,10 +1,11 @@
 .page-container
   width: 100vw
-  transition-duration: 300ms
+  // transition-duration: 300ms
+  transition: transform $sideNavSpeed
 
 .lock-scroll
-  position: fixed
-  overflow-x: hidden
+  // position: fixed
+  // overflow-x: hidden
 
 #firstBackground
   height: 100vh
@@ -14,6 +15,7 @@
     background-image: url('/assets/minneapolis.jpg')
     background-size: cover
     background-position: top
+    background-attachment: scroll
     height: 100vh
     width: 100vw
     filter: grayscale(50%)

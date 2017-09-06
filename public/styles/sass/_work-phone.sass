@@ -1,0 +1,223 @@
+body, html
+  // overflow-x: hidden !important
+
+#work
+  min-height: 100vh
+  background-color: #454545
+  padding-top: 40px
+  h1
+    +headerFont(2.6em)
+    margin: auto
+    text-align: center
+    margin-bottom: 40px
+  .skills
+    overflow: hidden
+    height: 140vh
+    position: relative
+    .paralax-background
+      height: 140%
+      width: 100%
+      background:
+        image: url('/assets/laptop.jpg')
+        size: cover
+        repeat: none
+        position: center
+        attachment: inherit
+      filter: blur(3px)
+      opacity: .4
+    .overlay
+      position: absolute
+      text-align: center
+      top: 0
+      height: 100%
+      width: 100%
+      opacity: 1
+      background-color: $overlayColor
+      .skills-grid
+        display: grid
+        grid-template-columns: auto
+        grid-template-rows: 80vh 45vh
+        width: 85vw
+        margin: auto
+        text-align: center
+        .icon-wrapper
+          align-self: center
+          justify-self: center
+          h2
+            margin-top: 0
+            +headerFont2(2em, $headingColor3)
+          .language-grid
+            display: grid
+            grid-template-columns: 25vw 25vw 25vw
+            grid-template-rows: 25vw 25vw 25vw
+            grid-column-gap: 7px
+            grid-row-gap: 7px
+            margin: auto
+            a
+              text-decoration: none
+            .language-icon
+              width: 100%
+              height: 100%
+              border:
+                radius: 50%
+                style: solid
+                width: 2px
+                color: $headingColor3
+              h3
+                margin: 0
+                text-align: center
+                position: relative
+                top: 12.5vw
+                transform: translateY(-50%)
+                +headerFont2(.8em, $headingColor3)
+        .description-wrapper
+          width: 80vw
+          align-self: center
+          justify-self: center
+          p
+            margin: auto
+            +bodyFont(1.2em)
+            color: white
+            line-height: 170%
+            a
+              +headerFont2(1.2em, $headingColor3)
+
+  .projects
+    // min-height: 450vh
+    overflow: hidden !important
+    .capture
+      height: 150vh
+      position: relative
+      .phone
+        position: absolute
+        width: 130vw
+        left: -15vw
+        transform: translateX(-20px)
+        opacity: 0
+      .project-description
+        width: 90vw
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        top: 70vh
+        text-align: center
+        h2
+          +headerFont2(1.6em, white)
+        p
+          +bodyFont(1em)
+          line-height: 170%
+          a
+            color: white
+        .tech-used-div
+          max-width: 70vw
+          margin: auto
+          ul
+            padding: 0
+          .tech-used
+            display: inline-block
+            background-color: black
+            margin: 3px
+            padding: 1px 4px
+            border-radius: 4px
+            color: white
+            +bodyFont(1em)
+    .personal-site
+      height: 105vh
+      position: relative
+      .desktop
+        position: absolute
+        height: 50vh
+        // left: 12vw
+        opacity: 0
+        transform: translateX(-20px)
+      .tablet
+        position: absolute
+        height: 25vh
+        left: 61vw
+        top: 22vh
+        opacity: 0
+        transform: translateX(-20px)
+      .phone
+        position: absolute
+        height: 12vh
+        left: 82.5vw
+        top: 33vh
+        opacity: 0
+        transform: translateX(-20px)
+      .project-description
+        width: 90vw
+        position: absolute
+        top: 45vh
+        left: 50%
+        transform: translateX(-50%)
+        text-align: center
+        h2
+          +headerFont2(1.6em, white)
+        p
+          +bodyFont(1em)
+          line-height: 170%
+        .tech-used-div
+          max-width: 70vw
+          margin: auto
+          ul
+            padding: 0
+          .tech-used
+            display: inline-block
+            background-color: black
+            margin: 3px
+            padding: 1px 4px
+            border-radius: 4px
+            color: white
+            +bodyFont(1em)
+    .praeco
+      height: 150vh
+      position: relative
+      .phone
+        position: absolute
+        width: 130vw
+        left: -15vw
+        transform: translateX(-20px)
+        opacity: 0
+      .project-description
+        width: 90vw
+        position: absolute
+        left: 50%
+        top: 70vh
+        transform: translateX(-50%)
+        text-align: center
+        h2
+          +headerFont2(1.6em, white)
+        p
+          +bodyFont(1em)
+          line-height: 170%
+          a
+            color: white
+        .tech-used-div
+          max-width: 70vw
+          margin: auto
+          ul
+            padding: 0
+          .tech-used
+            display: inline-block
+            background-color: black
+            margin: 3px
+            padding: 1px 4px
+            border-radius: 4px
+            color: white
+            +bodyFont(1em)
+
+  .experience
+    height: 70vh
+
+.mockup0
+  transition-duration: 400ms
+
+.mockup1
+  transition-duration: 400ms
+
+.mockup2
+  transition-duration: 400ms
+
+.vis
+  opacity: 1 !important
+  transform: translateX(0px) !important
