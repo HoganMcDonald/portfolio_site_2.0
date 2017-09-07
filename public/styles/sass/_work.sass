@@ -202,6 +202,50 @@
 
   .experience
     height: 70vh
+    h2
+      +headerFont2(2em, $headingColor3)
+      text-align: center
+    .timeline
+      position: relative
+      width: 80vw
+      height: 70%
+      border:
+        bottom: solid blue 2px
+      margin: auto
+      .point
+        height: 15px
+        width: 15px
+        border-radius: 50%
+        background-color: $progressActive
+        position: absolute
+        bottom: -7.5px
+        .tall-line
+          width: 2px
+          height: 220px
+          background-color: $progressActive
+          position: relative
+          bottom: 220px
+          left: 6px
+        .short-line
+          width: 2px
+          height: 80px
+          background-color: $progressActive
+          position: relative
+          bottom: 80px
+          left: 6px
+      .point0
+        left: -7.5px
+      .point1
+        left: 20%
+      .point2
+        left: 40%
+      .point3
+        left: 60%
+      .point4
+        left: 80%
+      .point5
+        right: -7.5px
+
 
 .mockup0
   transition-duration: 400ms
