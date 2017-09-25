@@ -8,27 +8,28 @@
     text-align: center
   .play-grid
     display: grid
-    grid-template-columns: 20vw 20vw 20vw
-    grid-template-rows: 5vw 20vw
-    grid-row-gap: 1vw
-    grid-column-gap: 5vw
+    grid-template-rows: 5vh 40vh 5vh 40vh 5vh 40vh
+    grid-row-gap: 4vw
     width: 70vw
     margin: auto
     .image-window
       height: 100%
     .read
+      grid-row: 6
       background:
         image: url('/assets/play/read.jpg')
         position: center
         size: contain
         repeat: no-repeat
     .play
+      grid-row: 2
       background:
         image: url('/assets/play/play.jpg')
         position: center
         size: contain
         repeat: no-repeat
     .listen
+      grid-row: 4
       background:
         image: url('/assets/play/listen.jpg')
         position: center
