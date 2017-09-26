@@ -202,7 +202,87 @@
             +bodyFont(1em)
 
   .experience
-    height: 70vh
+    height: 175vh
+    h2
+      +headerFont2(2em, $headingColor3)
+      text-align: center
+    .timeline-container
+      width: 100%
+      .background
+        position: absolute
+        width: 100vw
+        height: 168vh
+        overflow: hidden
+        .image
+          position: absolute
+          top: -10vh
+          left: -5%
+          width: 110%
+          height: 180vh
+          filter: blur(3px)
+          background:
+            image: url('/assets/experience.jpg')
+            size: cover
+            repeat: none
+            position: center
+      .timeline
+        position: relative
+        top: 5vh
+        width: 3px
+        height: 130vh
+        background-color: $timelineColor
+        margin-left: 7vw
+        .point
+          height: 25px
+          width: 25px
+          border-radius: 50%
+          background-color: $accentColor
+          position: absolute
+          left: 50%
+          transform: translateX(-50%)
+          .description
+            position: absolute
+            width: 70vw
+            min-height: 20vh
+            background-color: #454545
+            h4
+              +headerFont2(1.6em, white)
+              margin: 20px
+            p
+              +bodyFont(1em)
+              line-height: 170%
+              margin: 20px
+            ul
+              padding: 0
+              margin: 20px
+              .tech-used
+                display: inline-block
+                background-color: black
+                margin: 3px
+                padding: 1px 4px
+                border-radius: 4px
+                color: white
+                +bodyFont(1em)
+        .point0
+          top: 0
+          .description
+            right: -80vw
+        .point1
+          top: 25%
+          .description
+            right: -80vw
+        .point2
+          top: 50%
+          .description
+            right: -80vw
+        .point3
+          top: 75%
+          .description
+            right: -80vw
+        .point4
+          bottom: 0
+          .description
+            right: -80vw
 
 .mockup0
   transition-duration: 400ms

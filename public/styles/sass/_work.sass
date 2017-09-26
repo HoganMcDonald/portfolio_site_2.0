@@ -202,51 +202,88 @@
             +bodyFont(1em)
 
   .experience
-    height: 70vh
+    height: 145vh
     h2
       +headerFont2(2em, $headingColor3)
       text-align: center
-    .timeline
-      position: relative
-      width: 80vw
-      height: 70%
-      border:
-        bottom: solid blue 2px
-      margin: auto
-      .point
-        height: 15px
-        width: 15px
-        border-radius: 50%
-        background-color: $progressActive
+    .timeline-container
+      width: 100%
+      .background
         position: absolute
-        bottom: -7.5px
-        .tall-line
-          width: 2px
-          height: 220px
-          background-color: $progressActive
-          position: relative
-          bottom: 220px
-          left: 6px
-        .short-line
-          width: 2px
-          height: 80px
-          background-color: $progressActive
-          position: relative
-          bottom: 80px
-          left: 6px
-      .point0
-        left: -7.5px
-      .point1
-        left: 20%
-      .point2
-        left: 40%
-      .point3
-        left: 60%
-      .point4
-        left: 80%
-      .point5
-        right: -7.5px
-
+        width: 100vw
+        height: 140vh
+        overflow: hidden
+        .image
+          position: absolute
+          top: -10vh
+          left: -5%
+          width: 110%
+          height: 180vh
+          filter: blur(3px)
+          background:
+            image: url('/assets/experience.jpg')
+            size: cover
+            repeat: none
+            position: center
+      .timeline
+        position: relative
+        top: 5vh
+        width: 3px
+        height: 110vh
+        background-color: $timelineColor
+        margin: auto
+        .point
+          height: 25px
+          width: 25px
+          border-radius: 50%
+          background-color: $accentColor
+          position: absolute
+          left: 50%
+          transform: translateX(-50%)
+          .description
+            position: absolute
+            // top: -3vh
+            width: 30vw
+            min-height: 20vh
+            background-color: #454545
+            h4
+              +headerFont2(1.6em, white)
+              margin: 20px
+            p
+              +bodyFont(1em)
+              line-height: 170%
+              margin: 20px
+            ul
+              padding: 0
+              margin: 20px
+              .tech-used
+                display: inline-block
+                background-color: black
+                margin: 3px
+                padding: 1px 4px
+                border-radius: 4px
+                color: white
+                +bodyFont(1em)
+        .point0
+          top: 0
+          .description
+            left: -35vw
+        .point1
+          top: 25%
+          .description
+            right: -35vw
+        .point2
+          top: 50%
+          .description
+            left: -35vw
+        .point3
+          top: 75%
+          .description
+            right: -35vw
+        .point4
+          bottom: 0
+          .description
+            left: -35vw
 
 .mockup0
   transition-duration: 400ms
