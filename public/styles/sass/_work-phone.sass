@@ -207,47 +207,34 @@ body, html
             +bodyFont(1em)
 
   .experience
-    height: 300vh
     h2
       +headerFont2(2em, $headingColor3)
       text-align: center
     .timeline-container
       width: 100%
-      .background
-        position: absolute
-        width: 100vw
-        height: 291vh
-        overflow: hidden
-        .image
-          position: absolute
-          top: -10vh
-          left: -5%
-          width: 110%
-          height: 310vh
-          filter: blur(3px)
-          background:
-            image: url('/assets/experience.jpg')
-            size: cover
-            repeat: none
-            position: center
+      padding-bottom: 7vh
+      background:
+        image: url('/assets/experience.jpg')
+        size: cover
+        repeat: none
+        position: center
       .timeline
         position: relative
         top: 5vh
         width: 3px
-        height: 220vh
-        background-color: $timelineColor
-        margin-left: 7vw
+        margin: auto
         .point
-          height: 25px
-          width: 25px
-          border-radius: 50%
-          background-color: $accentColor
-          position: absolute
-          left: 50%
+          width: 90vw
           transform: translateX(-50%)
+          display: grid
+          grid-template-columns: 90vw
           .description
-            position: absolute
-            width: 70vw
+            grid-row-start: 2
+            justify-self: center
+            text-align: center
+            padding: 10px
+            margin-bottom: 20px
+            width: 80%
             min-height: 20vh
             background-color: #454545
             h4
@@ -268,26 +255,12 @@ body, html
                 border-radius: 4px
                 color: white
                 +bodyFont(1em)
-        .point0
-          top: 0
-          .description
-            right: -80vw
-        .point1
-          top: 28.5%
-          .description
-            right: -80vw
-        .point2
-          top: 52.5%
-          .description
-            right: -80vw
-        .point3
-          top: 71%
-          .description
-            right: -80vw
-        .point4
-          bottom: 0
-          .description
-            right: -80vw
+          .dateRange
+            grid-row-start: 1
+            text-align: center
+            width: 90vw
+            justify-self: center
+            margin-top: 0
 
 .mockup0
   transition-duration: 400ms
