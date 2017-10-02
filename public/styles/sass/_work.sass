@@ -221,27 +221,16 @@
         // height: 110vh
         background-color: $timelineColor
         margin: auto
-        .point:nth-of-type(odd)
-          .description
-            grid-column-start: 2
         .point
           width: 80vw
-          border: solid 2px black
           transform: translateX(-50%)
           display: grid
-          grid-template-columns: 50% 50%
-          // height: 25px
-          // width: 25px
-          // border-radius: 50%
-          // background-color: $accentColor
-          // position: absolute
-          // left: 50%
-          // transform: translateX(-50%)
+          grid-template-columns: 39.4vw 1.6em 39.4vw
           .description
             justify-self: center
             padding: 10px
             margin-bottom: 20px
-            width: 30vw
+            width: 80%
             min-height: 20vh
             background-color: #454545
             h4
@@ -262,6 +251,26 @@
                 border-radius: 4px
                 color: white
                 +bodyFont(1em)
+          .dateRange
+            text-align: left
+            width: 30vw
+            justify-self: center
+          .dot
+            width: 100%
+            height: 1.6em
+            border-radius: 50%
+            background-color: $accentColor
+            margin-top: 30px
+        .point:nth-of-type(odd)
+          .description
+            grid-column-start: 3
+          .dateRange
+            grid-column-start: 1
+            grid-row-start: 1
+            text-align: right
+          .dot
+            grid-column-start: 2
+            grid-row-start: 1
 
 .mockup0
   transition-duration: 400ms
