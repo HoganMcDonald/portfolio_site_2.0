@@ -202,29 +202,17 @@
             +bodyFont(1em)
 
   .experience
-    height: 145vh
+    // height: 145vh
     h2
       +headerFont2(2em, $headingColor3)
       text-align: center
     .timeline-container
       width: 100%
-      .background
-        position: absolute
-        width: 100vw
-        height: 140vh
-        overflow: hidden
-        .image
-          position: absolute
-          top: -10vh
-          left: -5%
-          width: 110%
-          height: 180vh
-          filter: blur(3px)
-          background:
-            image: url('/assets/experience.jpg')
-            size: cover
-            repeat: none
-            position: center
+      background:
+        image: url('/assets/experience.jpg')
+        size: cover
+        repeat: none
+        position: center
       .timeline
         position: relative
         top: 5vh

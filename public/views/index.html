@@ -171,90 +171,23 @@
 
           <div class="timeline-container">
 
-            <div class="background">
+            <!-- <div class="background">
               <div class="image">
               </div>
-            </div>
+            </div> -->
 
             <div class="timeline">
-              <div class="point point0">
-                <div class="description">
-                  <h4>DeepLearning.ai</h4>
-                  <p>I completed a certification course on building deep learning
-                    networks. This involved building an image classifier, implimenting
-                    logistic regression, and leveraging Python libraries to handle large,
-                    unstructured data sets. I have been using this knowlege to build a
-                    web API that can be used to identify local mushrooms.</p>
-                    <ul>
-                      <li class="tech-used">Python</li>
-                      <li class="tech-used">Numpy</li>
-                      <li class="tech-used">Pycharm</li>
-                      <li class="tech-used">Flask</li>
-                      <li class="tech-used">TensorFlow</li>
-                    </ul>
-                </div>
 
-              </div>
-              <div class="point point1">
+              <div class="point" ng-repeat="exp in experience">
                 <div class="description">
-                  <h4>Prime Digital Academy</h4>
-                  <p>I chose to attend prime because I knew that I learned best in
-                    an immersive environment. Prime o ered the intense experience
-                    I knew represented the best entry point into the industry for me.</p>
+                  <h4>{{exp.name}}</h4>
+                  <p>{{exp.description}}</p>
                     <ul>
-                      <li class="tech-used">MEAN Stack</li>
-                      <li class="tech-used">SQL</li>
-                      <li class="tech-used">SASS</li>
-                      <li class="tech-used">JQuery</li>
-                      <li class="tech-used">Heroku</li>
+                      <li class="tech-used" ng-repeat="tech in exp.techUsed">{{tech}}</li>
                     </ul>
                 </div>
               </div>
-              <div class="point point2">
-                <div class="description">
-                  <h4>[words] Bookstore</h4>
-                  <p>I worked in collaboration with business owners to open a
-                    first-of-its- kind independent bookstore in the MSP airport.</p>
-                    <ul>
-                      <li class="tech-used">Adobe Illustrator</li>
-                      <li class="tech-used">Adobe Photoshop</li>
-                      <li class="tech-used">Netsuite</li>
-                    </ul>
-                </div>
-              </div>
-              <div class="point point3">
-                <div class="description">
-                  <h4>Bloom Church</h4>
-                  <p>While at Bloom, I was ordained as a minister and would
-                    regularly deliver sermons to a group of 30 - 50 people.
-                    Other responsibilities included maintaining online content
-                    including church website, weekly newsletter, podcasts, and
-                    google ads.</p>
-                    <ul>
-                      <li class="tech-used">Adobe Illustrator</li>
-                      <li class="tech-used">Adobe Photoshop</li>
-                      <li class="tech-used">Squarespace</li>
-                      <li class="tech-used">Google Ads</li>
-                      <li class="tech-used">Google Analytics</li>
-                      <li class="tech-used">MailChimp</li>
-                    </ul>
-                </div>
-              </div>
-              <div class="point point4">
-                <div class="description">
-                  <h4>North Central University</h4>
-                  <p>My background is in pastoral ministry which involves formal
-                    education in organizational leadership, research, and communication.
-                    This background has taught me to be empithetic towards users in
-                    my design process as well as build software that provides value
-                    to people's lives</p>
-                    <ul>
-                      <li class="tech-used">Microsoft Office</li>
-                      <li class="tech-used">Apple iWork</li>
-                      <li class="tech-used">Google Drive</li>
-                    </ul>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
