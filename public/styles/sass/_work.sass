@@ -208,6 +208,7 @@
       text-align: center
     .timeline-container
       width: 100%
+      padding-bottom: 7vh
       background:
         image: url('/assets/experience.jpg')
         size: cover
@@ -217,20 +218,29 @@
         position: relative
         top: 5vh
         width: 3px
-        height: 110vh
+        // height: 110vh
         background-color: $timelineColor
         margin: auto
-        .point
-          height: 25px
-          width: 25px
-          border-radius: 50%
-          background-color: $accentColor
-          position: absolute
-          left: 50%
-          transform: translateX(-50%)
+        .point:nth-of-type(odd)
           .description
-            position: absolute
-            // top: -3vh
+            grid-column-start: 2
+        .point
+          width: 80vw
+          border: solid 2px black
+          transform: translateX(-50%)
+          display: grid
+          grid-template-columns: 50% 50%
+          // height: 25px
+          // width: 25px
+          // border-radius: 50%
+          // background-color: $accentColor
+          // position: absolute
+          // left: 50%
+          // transform: translateX(-50%)
+          .description
+            justify-self: center
+            padding: 10px
+            margin-bottom: 20px
             width: 30vw
             min-height: 20vh
             background-color: #454545
@@ -252,26 +262,6 @@
                 border-radius: 4px
                 color: white
                 +bodyFont(1em)
-        .point0
-          top: 0
-          .description
-            left: -35vw
-        .point1
-          top: 25%
-          .description
-            right: -35vw
-        .point2
-          top: 50%
-          .description
-            left: -35vw
-        .point3
-          top: 75%
-          .description
-            right: -35vw
-        .point4
-          bottom: 0
-          .description
-            left: -35vw
 
 .mockup0
   transition-duration: 400ms
