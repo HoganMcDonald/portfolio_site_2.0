@@ -75,7 +75,8 @@ $(document).ready( () => {
 
     // local variable created on scroll event that stores current pixel
     // count from the top of body.
-    const bScroll = $('body').scrollTop();
+    // const bScroll = $('.page-container').scrollingElement();
+    const bScroll = document.scrollingElement.scrollTop;
     // console.log(bScroll); // test position
 
     // nav bar scroll events
