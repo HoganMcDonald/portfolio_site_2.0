@@ -202,13 +202,12 @@
             +bodyFont(1em)
 
   .experience
-    // height: 145vh
     h2
       +headerFont2(2em, $headingColor3)
       text-align: center
     .timeline-container
       width: 100%
-      padding-bottom: 7vh
+      padding-bottom: 12vh
       background:
         image: url('/assets/experience.jpg')
         size: cover
@@ -218,12 +217,11 @@
         position: relative
         top: 5vh
         width: 3px
-        // height: 110vh
         background-color: $timelineColor
         margin: auto
         .point
           width: 80vw
-          transform: translateX(-50%)
+          transform: translate(-50%, -30px)
           display: grid
           grid-template-columns: 39.4vw 1.6em 39.4vw
           .description
