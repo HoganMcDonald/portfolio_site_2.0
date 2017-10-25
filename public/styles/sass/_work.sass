@@ -169,6 +169,7 @@
       position: relative
       .desktop
         position: absolute
+        left: 4vw
         height: 90vh
         opacity: 0
         transform: translateX(-20px)
@@ -183,6 +184,42 @@
         p
           +bodyFont(1em)
           line-height: 170%
+        .tech-used-div
+          max-width: 15vw
+          margin: auto
+          ul
+            padding: 0
+          .tech-used
+            display: inline-block
+            background-color: black
+            margin: 3px
+            padding: 1px 4px
+            border-radius: 4px
+            color: white
+            +bodyFont(1em)
+    .workout
+      height: 100vh
+      position: relative
+      .phone
+        position: absolute
+        height: 100vh
+        top: -4vh
+        right: 5vw
+        opacity: 0
+        transform: translateX(20px)
+      .project-description
+        width: 30vw
+        position: absolute
+        top: 30vh
+        left: 12vw
+        text-align: center
+        h2
+          +headerFont2(1.6em, white)
+        p
+          +bodyFont(1em)
+          line-height: 170%
+          a
+            color: white
         .tech-used-div
           max-width: 15vw
           margin: auto
