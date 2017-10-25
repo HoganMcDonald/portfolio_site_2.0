@@ -1,3 +1,6 @@
+// message for developers
+console.log('Thanks for taking the time to check out my site. 🙏 If you noticed a bug of any kind, please let me know using the contact form below. If you are curious about my code, you can find the repo for this site at https://github.com/HoganMcDonald/portfolio_site_2.0');
+
 // video id
 const id = 'd45dMdWUSsU';
 

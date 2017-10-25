@@ -164,6 +164,38 @@
             border-radius: 4px
             color: white
             +bodyFont(1em)
+    .die
+      height: 100vh
+      position: relative
+      .desktop
+        position: absolute
+        height: 90vh
+        opacity: 0
+        transform: translateX(-20px)
+      .project-description
+        width: 30vw
+        position: absolute
+        top: 20vh
+        right: 8vw
+        text-align: center
+        h2
+          +headerFont2(1.6em, white)
+        p
+          +bodyFont(1em)
+          line-height: 170%
+        .tech-used-div
+          max-width: 15vw
+          margin: auto
+          ul
+            padding: 0
+          .tech-used
+            display: inline-block
+            background-color: black
+            margin: 3px
+            padding: 1px 4px
+            border-radius: 4px
+            color: white
+            +bodyFont(1em)
     .praeco
       height: 100vh
       position: relative
