@@ -1,6 +1,7 @@
 // requires
 require('dotenv').config()
 const express = require('express'),
+  compression = require('compression'),
   app = express();
 
 // require routes
@@ -11,6 +12,7 @@ const index = require('./modules/routes/index'),
 const port = process.env.PORT;
 
 // uses
+app.use(compression());
 app.use(express.static('public'));
 
 // use routes
