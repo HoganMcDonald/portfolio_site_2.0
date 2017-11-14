@@ -56,6 +56,27 @@ app.controller('mainController', function($scope, $http) {
     dateRange: '2013 - 2015'}
   ]
 
+  $scope.skills = [
+    {name: 'Python',
+    url: 'https://www.python.org/'},
+    {name: 'JavaScript',
+    url: 'https://www.javascript.com/'},
+    {name: 'Java',
+    url: 'https://java.com/en/'},
+    {name: 'Deep Learning',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/32NQ4QDGGEFL'},
+    {name: 'ES6/7',
+    url: 'https://www.ecma-international.org/publications/standards/Ecma-262.htm'},
+    {name: 'Node.js',
+    url: 'https://nodejs.org/en/'},
+    {name: 'P5.js',
+    url: 'https://p5js.org/'},
+    {name: 'AngularJS',
+    url: 'https://angularjs.org/'},
+    {name: 'TensorFlow',
+    url: 'https://www.tensorflow.org/'}
+  ]
+
   $scope.projects = [
     {name: 'Capture App',
     img: '/assets/capture.png',
