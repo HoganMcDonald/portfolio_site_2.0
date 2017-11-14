@@ -83,14 +83,14 @@ app.controller('mainController', function($scope, $http) {
     description: 'Capture is a mobile-first web application for public speakers. In my previous career as a pastor, I developed a system for writing sermons that involved seperating idea generation from the rest of the writing process. Capture is the digital implimentation of that concept. Capture was my first full stack application and through developing it I learned a lot about the importance of application architecture as well as authentication.',
     techUsed: ['Node.js', 'Express.js', 'PostgreSQL', 'Heroku', 'IBM Watson', 'Nodemailer']},
 
-    {name: 'Praeco IIoT &nbsp&nbsp || &nbsp&nbsp Lab651',
+    {name: 'Praeco IIoT || Lab651',
     img: '/assets/praeco.png',
-    description: 'An mobile-first web platform designed for industrial clients to set up real time notifications when conditions in their spaces change. I worked on this project as part of a team on behalf of Lab651. Although the code for this project is private, here are some useful links describing what we did:<br> <a href="https://lab651.com/products/">Lab651</a> &nbsp||&nbsp <a href="https://tech.mn/news/2017/06/09/st-paul-based-lab651-keystone-automation-for-joint-iot-venture/">Tech.mn</a>',
+    description: 'An mobile-first web platform designed for industrial clients to set up real time notifications when conditions in their spaces change. I worked on this project as part of a team on behalf of Lab651.',
     techUsed: ['Particle.io web api', 'Node.js', 'Express.js', 'MongoDB', 'Heroku', 'Twilio SMS', 'Twilio Voice', 'Nodemailer']},
 
     {name: 'I Know When You\'re Going to Die',
     img: '/assets/die.png',
-    description: 'I placed 2nd competing alongside a designer in the 2017 Hack for Change Hackathon as part of Twin Cities Startup Week. Our app leveraged the event’s sponsor’s (Nexosis) machine learning api as well as CDC data on mortality to predict a users exact date of death. The project required us to clean a dataset, upload that set to Nexosis using AWS, and train a regression model with 3 inputs and a single output feature.<br> <a href="http://www.nexosis.com/">Nexosis</a> &nbsp||&nbsp <a href="http://twincitiesstartupweek.com/">TCSW</a>',
+    description: 'I placed 2nd competing alongside a designer in the 2017 Hack for Change Hackathon as part of Twin Cities Startup Week. Our app leveraged the event’s sponsor’s (Nexosis) machine learning api as well as CDC data on mortality to predict a users exact date of death. The project required us to clean a dataset, upload that set to Nexosis using AWS, and train a regression model with 3 inputs and a single output feature.',
     techUsed: ['Nexosis api', 'Node.js', 'Express.js', 'Google Analytics', 'Machine Learning']},
 
     {name: 'Simple Workout',
@@ -101,12 +101,7 @@ app.controller('mainController', function($scope, $http) {
     {name: 'Personal Site',
     img: '/assets/this-desktop.png',
     description: 'This site was built to showcase my attention to detail, skill as a front end developer, and passion for modern design trends. I especially enjoyed the added challenge of keeping the entire site in a single page.',
-    techUsed: ['HTML', 'SASS', 'YouTube iFrame API', 'Responsive Design', 'JavaScript', 'JQuery', 'Node.js', 'Express.js']},
-
-    {name: '',
-    img: '',
-    description: '',
-    techUsed: ['']}
+    techUsed: ['HTML', 'SASS', 'YouTube iFrame API', 'Responsive Design', 'JavaScript', 'JQuery', 'Node.js', 'Express.js']}
   ]
 
 }); // end main controller

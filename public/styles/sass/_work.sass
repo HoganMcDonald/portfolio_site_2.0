@@ -82,184 +82,36 @@
               +headerFont2(1.2em, $headingColor3)
 
   .projects
-    min-height: 70vh
-    .capture
-      height: 100vh
-      position: relative
-      .phone
-        position: absolute
-        height: 100vh
-        top: -4vh
-        left: 5vw
-        opacity: 0
-        transform: translateX(-20px)
+    .project
+      height: 70vh
+      width: 80vw
+      +siteGradient()
+      margin: auto
+      margin-bottom: 20vh
+      display: grid
+      grid-template-columns: 45% auto
+      grid-template-rows: 100%
+      grid-column-gap: 2vw
+      box-shadow: 0px 0px 20px -5px 'black'
+      .project-image
+        align-self: center
+        justify-self: center
+        max-height: 80%
       .project-description
-        width: 30vw
-        position: absolute
-        top: 30vh
-        right: 12vw
-        text-align: center
+        align-self: center
+        justify-self: center
         h2
-          +headerFont2(1.6em, white)
+          +headerFont2(2em, $headingColor)
+          text-align: center
         p
+          text-align: center
+          width: 70%
+          margin: auto
           +bodyFont(1em)
-          line-height: 170%
-          a
-            color: white
         .tech-used-div
           max-width: 15vw
           margin: auto
-          ul
-            padding: 0
-          .tech-used
-            display: inline-block
-            background-color: black
-            margin: 3px
-            padding: 1px 4px
-            border-radius: 4px
-            color: white
-            +bodyFont(1em)
-    .personal-site
-      height: 100vh
-      position: relative
-      .desktop
-        position: absolute
-        height: 90vh
-        opacity: 0
-        transform: translateX(-20px)
-      .tablet
-        position: absolute
-        height: 65vh
-        left: 25vw
-        top: 22vh
-        opacity: 0
-        transform: translateX(-20px)
-      .phone
-        position: absolute
-        height: 40vh
-        left: 42vw
-        top: 43vh
-        opacity: 0
-        transform: translateX(-20px)
-      .project-description
-        width: 30vw
-        position: absolute
-        top: 30vh
-        right: 8vw
-        text-align: center
-        h2
-          +headerFont2(1.6em, white)
-        p
-          +bodyFont(1em)
-          line-height: 170%
-        .tech-used-div
-          max-width: 15vw
-          margin: auto
-          ul
-            padding: 0
-          .tech-used
-            display: inline-block
-            background-color: black
-            margin: 3px
-            padding: 1px 4px
-            border-radius: 4px
-            color: white
-            +bodyFont(1em)
-    .die
-      height: 100vh
-      position: relative
-      .desktop
-        position: absolute
-        left: 4vw
-        height: 90vh
-        opacity: 0
-        transform: translateX(-20px)
-      .project-description
-        width: 30vw
-        position: absolute
-        top: 20vh
-        right: 8vw
-        text-align: center
-        h2
-          +headerFont2(1.6em, white)
-        p
-          +bodyFont(1em)
-          line-height: 170%
-        .tech-used-div
-          max-width: 15vw
-          margin: auto
-          ul
-            padding: 0
-          .tech-used
-            display: inline-block
-            background-color: black
-            margin: 3px
-            padding: 1px 4px
-            border-radius: 4px
-            color: white
-            +bodyFont(1em)
-    .workout
-      height: 100vh
-      position: relative
-      .phone
-        position: absolute
-        height: 100vh
-        top: -4vh
-        right: 5vw
-        opacity: 0
-        transform: translateX(20px)
-      .project-description
-        width: 30vw
-        position: absolute
-        top: 30vh
-        left: 12vw
-        text-align: center
-        h2
-          +headerFont2(1.6em, white)
-        p
-          +bodyFont(1em)
-          line-height: 170%
-          a
-            color: white
-        .tech-used-div
-          max-width: 15vw
-          margin: auto
-          ul
-            padding: 0
-          .tech-used
-            display: inline-block
-            background-color: black
-            margin: 3px
-            padding: 1px 4px
-            border-radius: 4px
-            color: white
-            +bodyFont(1em)
-    .praeco
-      height: 100vh
-      position: relative
-      .phone
-        position: absolute
-        height: 100vh
-        top: -4vh
-        right: 5vw
-        opacity: 0
-        transform: translateX(20px)
-      .project-description
-        width: 30vw
-        position: absolute
-        top: 30vh
-        left: 12vw
-        text-align: center
-        h2
-          +headerFont2(1.6em, white)
-        p
-          +bodyFont(1em)
-          line-height: 170%
-          a
-            color: white
-        .tech-used-div
-          max-width: 15vw
-          margin: auto
+          text-align: center
           ul
             padding: 0
           .tech-used
@@ -285,7 +137,7 @@
         position: center
       .timeline
         position: relative
-        top: 5vh
+        top: 7vh
         width: 3px
         background-color: $timelineColor
         margin: auto
@@ -340,14 +192,6 @@
             grid-column-start: 2
             grid-row-start: 1
 
-.mockup0
-  transition-duration: 400ms
-
-.mockup1
-  transition-duration: 400ms
-
-.mockup2
-  transition-duration: 400ms
 
 .vis
   opacity: 1 !important
