@@ -118,33 +118,6 @@ $(document).ready( () => {
       $('.progress-circle').removeClass('active-progress');
     }
 
-    // fade in praeco images
-    if (current > $('.praeco').offset().top - 600) {
-      $('.mockup0').each(function(i) {
-        setTimeout(function() {
-          $('.mockup0').eq(i).addClass('vis');
-        }, 400 * (i + 1));
-      }); // end each loop
-    } // end fade in praeco images
-
-    // fade in capture images
-    if (current > $('.capture').offset().top - 600) {
-      $('.mockup2').each(function(i) {
-        setTimeout(function() {
-          $('.mockup2').eq(i).addClass('vis');
-        }, 400 * (i + 1));
-      }); // end each loop
-    } // end fade in capture images
-
-    // fade in personal-site images
-    if (current > $('.personal-site').offset().top - 600) {
-      $('.mockup1').each(function(i) {
-        setTimeout(function() {
-          $('.mockup1').eq(i).addClass('vis');
-        }, 400 * (i + 1));
-      }); // end each loop
-    } // end fade in personal-site images
-
     // paralax on aralax-background
     let para = $('.paralax-background');
     let paraTop = para.offset().top;
@@ -191,6 +164,8 @@ $(document).ready( () => {
         break;
       case '5':
         scrollToAnchor('contact', 5);
+        break;
+      case 'blog':
         break;
       default:
         scrollToAnchor('home', 1);

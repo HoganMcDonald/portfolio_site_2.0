@@ -1,6 +1,17 @@
-let app = angular.module('myApp', []);
+let app = angular.module('myApp', ['ngRoute']);
 
-app.controller('mainController', function($scope, $http) {
+app.config(($routeProvider)=> {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/partials/home.html'
+    })
+    .when('/blog', {
+      templateUrl: 'views/partials/blog.html',
+      controller: 'blogController as bc'
+    })
+});
+
+app.controller('mainController', function($scope, $http, $location) {
 
   //clear input fields
   $scope.clearFields = ()=> {
@@ -9,6 +20,12 @@ app.controller('mainController', function($scope, $http) {
     $scope.name = undefined;
     $scope.subject = undefined;
     $scope.message = undefined;
+  };
+
+  // navigate to blog partial
+  $scope.goBlog = ()=> {
+    console.log('clicked');
+    $location.path('blog');
   };
 
   // sends an email when submit is clicked
@@ -105,3 +122,7 @@ app.controller('mainController', function($scope, $http) {
   ]
 
 }); // end main controller
+
+app.controller('blogController', function() {
+
+}); // end blog controller
