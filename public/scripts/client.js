@@ -91,41 +91,45 @@ $(document).ready( () => {
       $('nav').removeClass('navVis');
     }
 
-    // reveal progress bars
-    if (bScroll > $('#work').offset().top - viewportHeight / 2 - 100 && bScroll < $('#work').offset().top + $('#work').height() - viewportHeight / 2  )  {
-      $('.progress-bar').css('opacity', 1);
-    } else {
-      $('.progress-bar').css('opacity', 0);
-    }
+    // home ('/') scroll events
+    console.log(window.location.pathname);
+    if (window.location.pathname === '/') {
+      // reveal progress bars
+      if (bScroll > $('#work').offset().top - viewportHeight / 2 - 100 && bScroll < $('#work').offset().top + $('#work').height() - viewportHeight / 2  )  {
+        $('.progress-bar').css('opacity', 1);
+      } else {
+        $('.progress-bar').css('opacity', 0);
+      }
 
-    // highlight correct progress-bar unit
-    let skillsTop = $('.skills').offset().top;
-    let projectsTop = $('#work').offset().top;
-    let experienceTop = $('.experience').offset().top;
-    let experienceBottom = $('#contact').offset().top
-    let current = bScroll + 80;
+      // highlight correct progress-bar unit
+      let skillsTop = $('.skills').offset().top;
+      let projectsTop = $('#work').offset().top;
+      let experienceTop = $('.experience').offset().top;
+      let experienceBottom = $('#contact').offset().top
+      let current = bScroll + 80;
 
-    if (current >= projectsTop && current < skillsTop) { // skills section
-      $('.progress-circle').removeClass('active-progress');
-      $('.progress-circle').eq(0).addClass('active-progress');
-    } else if (current >= skillsTop && current < experienceTop) { // projects section
-      $('.progress-circle').removeClass('active-progress');
-      $('.progress-circle').eq(1).addClass('active-progress');
-    } else if (current >= experienceTop && current < experienceBottom) { // experience section
-      $('.progress-circle').removeClass('active-progress');
-      $('.progress-circle').eq(2).addClass('active-progress');
-    } else {
-      $('.progress-circle').removeClass('active-progress');
-    }
+      if (current >= projectsTop && current < skillsTop) { // skills section
+        $('.progress-circle').removeClass('active-progress');
+        $('.progress-circle').eq(0).addClass('active-progress');
+      } else if (current >= skillsTop && current < experienceTop) { // projects section
+        $('.progress-circle').removeClass('active-progress');
+        $('.progress-circle').eq(1).addClass('active-progress');
+      } else if (current >= experienceTop && current < experienceBottom) { // experience section
+        $('.progress-circle').removeClass('active-progress');
+        $('.progress-circle').eq(2).addClass('active-progress');
+      } else {
+        $('.progress-circle').removeClass('active-progress');
+      }
 
-    // paralax on aralax-background
-    let para = $('.paralax-background');
-    let paraTop = para.offset().top;
-    let paraHeight = para.height();
+      // paralax on aralax-background
+      let para = $('.paralax-background');
+      let paraTop = para.offset().top;
+      let paraHeight = para.height();
 
-    if (paraTop < bScroll + viewportHeight && paraTop + paraHeight > bScroll) {
-      para.css('transform', 'translateY(' + ((paraTop - bScroll) / 17 - 75) + 'px)')
-    }
+      if (paraTop < bScroll + viewportHeight && paraTop + paraHeight > bScroll) {
+        para.css('transform', 'translateY(' + ((paraTop - bScroll) / 17 - 75) + 'px)')
+      }
+    } // end home page scroll events
 
   }); // end on scroll
 
