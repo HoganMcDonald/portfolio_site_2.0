@@ -25,8 +25,11 @@ gulp.task('styles', () => {
 });
 
 gulp.task('minify', function() {
-  return gulp.src('public/views/src/index.html')
+  return gulp.src('public/views/src/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest('public/views'));
 });
 
