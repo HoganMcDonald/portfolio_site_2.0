@@ -3,12 +3,58 @@
   <head>
     <meta charset="utf-8">
     <title>Hogan McDonald | Blog</title>
+    <link async rel="stylesheet" href="/styles/blog.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108397699-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-108397699-2');
+    </script>
   </head>
   <body>
-    <!-- navigation to main site -->
-    <div class="home"></div>
 
-    
+    <header>
+      <div class="background"></div>
+      <a href="/"><div class="home">
+        <img src="/assets/home.svg" alt="home">
+      </div></a>
 
+    </header>
+
+    <div class="profile"></div>
+
+
+    <div class="content">
+      <div class="post">
+        <h1>The Thing About Code</h1>
+        <p>Lorem ipsum dolor amet synth cloud bread lumbersexual glossier. Vexillologist echo park glossier franzen kale chips subway tile mixtape fingerstache adaptogen keytar vegan humblebrag cold-pressed vape tilde. Godard fashion axe post-ironic forage, aesthetic pour-over +1 tattooed copper mug kickstarter narwhal. Cronut knausgaard vinyl etsy. Swag snackwave freegan bushwick helvetica, knausgaard venmo 90's mlkshk franzen. Green juice thundercats normcore tacos. Craft beer kale chips bitters mustache fixie.
+
+        Affogato letterpress aesthetic chillwave tacos, post-ironic austin cray ethical squid humblebrag authentic skateboard gastropub 3 wolf moon. Crucifix vape roof party intelligentsia vaporware flannel. Seitan distillery fingerstache sustainable kitsch, williamsburg humblebrag cred next level vape pop-up readymade authentic hexagon. Salvia literally stumptown lomo thundercats echo park. Cray butcher plaid deep v, iceland jean shorts slow-carb brooklyn biodiesel artisan ethical. Master cleanse green juice mlkshk, before they sold out heirloom street art letterpress mixtape vape ethical helvetica cronut.
+
+        Hoodie PBR affogato you probably haven't heard of them paleo. Swag thundercats woke succulents iceland you probably haven't heard of them jean shorts. Seitan tofu sustainable, fam activated charcoal pork belly four loko four dollar toast. Waistcoat cliche pok pok bitters live-edge.</p>
+      </div>
+    </div>
+
+
+    <footer id="links">
+      <a href="https://www.linkedin.com/in/hogan-mcdonald/"><img src="/assets/linkedin.svg" alt="linkedin"></a>
+      <a href="https://github.com/HoganMcDonald"><img src="/assets/github.svg" alt="github"></a>
+      <a href="mailto:hpeter.mcdonald@icloud.com"><img src="/assets/email.svg" alt=""></a>
+    </footer>
+
+    <!-- script files -->
+    <!-- Typekit -->
+    <script src="https://use.typekit.net/hal4idp.js"></script>
+    <script>
+      try {
+        Typekit.load({
+          async: true
+        });
+      } catch (e) {}
+    </script>
+    <script src="vendors/jquery.min.js" charset="utf-8"></script>
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
   </body>
 </html>

@@ -9,7 +9,7 @@ const gulp = require('gulp'),
 //tasks
 gulp.task('styles', () => {
   console.log('styles ran');
-  gulp.src('public/styles/sass/main.sass')
+  gulp.src(['public/styles/sass/main.sass', 'public/styles/sass/blog.sass'])
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],

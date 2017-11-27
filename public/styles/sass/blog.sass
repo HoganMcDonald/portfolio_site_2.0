@@ -1,0 +1,34 @@
+//global vars
+@import vars
+
+$bodyColor: rgb(237, 237, 237)
+
+body, html
+  margin: 0
+  min-height: 100vh
+
+body
+  overflow: visible
+  background-color: $bodyColor
+
+.show
+  opacity: 1
+
+.selected
+  color: $navLinkActive
+  text-decoration: underline
+
+// Universal styles
+@import footer
+
+// desktop styles
+@media (min-width: $minDesktop)
+  @import blogPage
+
+
+// ipad styles
+// @media (min-width: $minIpad) and (max-width: $maxIpad)
+
+
+// mobile styles
+// @media (max-width: $maxPhone)
