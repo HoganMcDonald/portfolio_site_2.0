@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro')
+
 $homeNav: rgb(75, 75, 75)
 
 header
@@ -55,7 +57,33 @@ header
     h1
       +headerFont(3em)
       text-align: center
-    p
+    p, li
+      text-align: left
+      line-height: 1.4em
+      text-indent: 50px
       font:
         family: 'source-sans-pro'
-        size: 1em
+        size: 1.2em
+    li
+      margin-left: 50px
+      padding-left: -100px
+      text-indent: 20px
+    pre
+      background-color: $bodyColor
+      padding: 40px
+      width: 80%
+      margin: auto
+    code
+      text-align: left
+      font-family: 'Source Code Pro', monospace
+
+$base-font-size: 18px
+$heading-scale: 6 // amount of px headings grow from h6 to h1
+
+@for $i from 1 through 6
+  h#{$i}
+    font-size: $base-font-size + $heading-scale * (6 - $i)
+    font-family: 'source-sans-pro'
+    font-weight: 200
+    text-align: center
+    color: $headingColor2
