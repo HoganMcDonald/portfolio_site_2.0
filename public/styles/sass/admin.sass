@@ -1,3 +1,6 @@
+@import vars
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro')
+
 body
   height: 100vh
   display: grid
@@ -14,4 +17,49 @@ body
     grid-row-start: 2
     align-self: center
     justify-self: center
-  ng-bind-html
+  .output
+    width: 80%
+    height: 80%
+    overflow-y: scroll
+    padding: 40px
+    background-color: rgb(255, 255, 255)
+    box-shadow: 0px 0px 9px -2px rgb(150, 150, 150)
+    margin: auto
+    h1
+      +headerFont(3em)
+      text-align: center
+    p, li
+      text-align: left
+      line-height: 1.4em
+      text-indent: 50px
+      font:
+        family: 'source-sans-pro'
+        size: 1.2em
+    li
+      margin-left: 50px
+      padding-left: -100px
+      text-indent: 20px
+    pre > code, p > code
+      background-color: $bodyColor
+      width: 80%
+      margin: auto
+    code
+      text-align: left
+      font-family: 'Source Code Pro', monospace
+    blockquote
+      border-left: solid 3px rgb(203, 203, 203)
+      padding-left: 10px
+      p
+        text-indent: 0px
+        color: rgb(130, 130, 130)
+
+$base-font-size: 18px
+$heading-scale: 6 // amount of px headings grow from h6 to h1
+
+@for $i from 1 through 6
+  h#{$i}
+    font-size: $base-font-size + $heading-scale * (6 - $i)
+    font-family: 'source-sans-pro'
+    font-weight: 200
+    text-align: center
+    color: $headingColor2

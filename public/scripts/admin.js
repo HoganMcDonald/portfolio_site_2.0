@@ -1,7 +1,10 @@
 let app = angular.module('admin', ['ngSanitize']);
 
-app.controller('adminController', function($sanitize, $scope, $html) {
+app.controller('adminController', function($sanitize, $scope, $http) {
+
   $scope.renderHTML = function() {
-    $scope.posthtml = '';
+    console.log('triggered');
+    $scope.posthtml = $sanitize(marked($scope.postmd));
   };
+
 });
