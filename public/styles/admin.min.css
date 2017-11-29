@@ -1,0 +1,1 @@
+body{height:100vh;display:grid;grid-template-columns:50% 50%;grid-template-rows:90% 10%;margin:0}body textarea{width:80%;height:80%;-ms-flex-item-align:center;align-self:center;justify-self:center}body .submit{grid-column-start:0;grid-row-start:2;-ms-flex-item-align:center;align-self:center;justify-self:center}

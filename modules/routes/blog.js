@@ -28,12 +28,12 @@ router.get('/', (req, res)=> {
   res.sendFile(path.resolve('public/views/blog.min.html'));
 });
 
-router.get('/post/:id', (req, res)=> {
-  const id = req.params.id;
+router.get('/post/:name', (req, res)=> {
+  const name = req.params.name;
 
   const params = {
     Bucket: "blog.hoganmcdonald",
-    Key: id
+    Key: name + '.md'
    };
 
    S3.getObject(params, (err, data)=> {
@@ -43,8 +43,8 @@ router.get('/post/:id', (req, res)=> {
    });
 });
 
-router.get('/feed', (req, res)=> {
-
+router.get('/admin', (req, res)=> {
+  res.sendFile(path.resolve('public/views/admin.min.html'));
 });
 
 module.exports = router;

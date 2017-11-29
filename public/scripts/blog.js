@@ -1,3 +1,5 @@
+console.log(navigator);
+
 let app = angular.module('blogApp', ['ngSanitize']);
 
 app.controller('blogController', function($scope, $http, $sanitize) {
