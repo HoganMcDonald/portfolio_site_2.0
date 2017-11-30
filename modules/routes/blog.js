@@ -33,7 +33,7 @@ router.get('/post/:name', (req, res)=> {
 
   const params = {
     Bucket: "blog.hoganmcdonald",
-    Key: name + '.md'
+    Key: name
    };
 
    S3.getObject(params, (err, data)=> {
