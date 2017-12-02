@@ -9,6 +9,7 @@ const path = require('path'),
 const router = require('express').Router();
 
 // uses
+router.use(bodyParser.urlencoded({extended: true}));
 marked.setOptions({
   renderer: new marked.Renderer(),
   gfm: true,
@@ -37,7 +38,6 @@ router.get('/post/:name', (req, res)=> {
    };
 
    S3.getObject(params, (err, data)=> {
-     console.log(data);
      let file = data.Body.toString('utf-8');
      res.send(marked(file));
    });
@@ -45,6 +45,26 @@ router.get('/post/:name', (req, res)=> {
 
 router.get('/admin', (req, res)=> {
   res.sendFile(path.resolve('public/views/admin.min.html'));
+});
+
+router.post('/admin/newPost', (req, res)=> {
+  console.log(req.body);
+  if (req.body.password === process.env.PASSWORD) {
+    const file_name = req.body.fileName;
+    //create file
+    const params = {
+      Bucket: "blog.hoganmcdonald",
+      Key: file_name + '.md',
+      Body: req.body.file
+     };
+    //post to S3
+    S3.putObject(params, (err, data)=> {
+      console.log(err);
+      console.log(data);
+      res.sendStatus(201);
+    });
+  }
+
 });
 
 module.exports = router;

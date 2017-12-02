@@ -9,7 +9,8 @@
 
     <textarea rows="8" cols="80" ng-model="postmd" ng-keydown="renderHTML()"></textarea>
     <div class="submit">
-      <input type="password" ng-model="password">
+      <input type="text" ng-model="title" placeholder="Title">
+      <input type="password" ng-model="password" placeholder="Password">
       <button type="button" ng-click="sendMD()">Submit</button>
     </div>
 
