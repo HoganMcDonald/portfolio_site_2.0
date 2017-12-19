@@ -34,22 +34,31 @@ app.controller('mainController', function($scope, $http) {
 
   // places I have worked. array of objects.
   $scope.experience = [
+    {name: 'TCSW Hack For Change 2017',
+    description: 'My partner and I placed 2nd in the 2017 Hack for Change Hackathon as part of Twin Cities Startup Week. Our app leveraged machine learning api as well as CDC data on mortality to predict a users exact date of death.',
+    techUsed: ['Nexosis api', 'Node.js', 'Express.js', 'Google Analytics', 'Machine Learning'],
+    dateRange: '2017'},
+
     {name: 'DeepLearning.ai',
     description: 'I completed a certification course on building deep learning networks. This involved building an image classifier, implimenting logistic regression, and leveraging Python libraries to handle large, unstructured data sets. I have been using this knowlege to build a web API that can be used to identify local mushrooms.',
     techUsed: ['Python', 'Numpy', 'Pycharm', 'Flask', 'TensorFlow'],
     dateRange: '2017'},
+
     {name: 'Prime Digital Academy',
     description: 'I chose to attend prime because I knew that I learned best in an immersive environment. Prime o ered the intense experience I knew represented the best entry point into the industry for me.',
     techUsed: ['MEAN Stack', 'SQL', 'SASS', 'JQuery', 'Heroku'],
     dateRange: '2017'},
+
     {name: '[words] Bookstore',
     description: 'I worked in collaboration with business owners to open a first-of-its- kind independent bookstore in the MSP airport.',
     techUsed: ['Adobe Illustrator', 'Adobe Photoshop', 'Netsuite'],
     dateRange: '2016 - 2017'},
+
     {name: 'Bloom Church',
     description: 'While at Bloom, I was ordained as a minister and would regularly deliver sermons to a group of 30 - 50 people. Other responsibilities included maintaining online content including church website, weekly newsletter, podcasts, and google ads.',
     techUsed: ['Adobe Illustrator', 'Adobe Photoshop', 'Squarespace', 'Google Ads', 'Google Analytics', 'MailChimp'],
     dateRange: '2015 - 2016'},
+
     {name: 'North Central University',
     description: 'My background is in pastoral ministry which involves formal education in organizational leadership, research, and communication. This background has taught me to be empithetic towards users in my design process as well as build software that provides value to people\'s lives',
     techUsed: ['Microsoft Office', 'Apple iWork', 'Google Drive'],
